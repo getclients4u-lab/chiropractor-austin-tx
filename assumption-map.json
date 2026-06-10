@@ -1,0 +1,82 @@
+{
+  "project_id": "chiropractor-austin-tx",
+  "assumptions": {
+    "market": [
+      {
+        "assumption": "Austin has sufficient demand for chiropractic services",
+        "confidence": "High",
+        "evidence": "127 practices in metro area, population growth 2.1% annually",
+        "risk": "Low",
+        "test_method": "Google Trends analysis for 'chiropractor Austin'"
+      },
+      {
+        "assumption": "Chiropractors are willing to pay for marketing services",
+        "confidence": "Medium",
+        "evidence": "Average patient value $1,200-2,400/year, acquisition cost $180",
+        "risk": "Medium",
+        "test_method": "Survey 10 practices on marketing budget"
+      }
+    ],
+    "channel": [
+      {
+        "assumption": "Facebook/Instagram are effective channels for reaching patients",
+        "confidence": "High",
+        "evidence": "70% have Facebook, 35% on Instagram, demographic match",
+        "risk": "Low",
+        "test_method": "Run $100 test campaign, measure CPL"
+      },
+      {
+        "assumption": "Email outreach will generate responses",
+        "confidence": "Medium",
+        "evidence": "Healthcare industry avg open rate 21%, response 3-5%",
+        "risk": "Medium",
+        "test_method": "Send 50 personalized emails, track response rate"
+      }
+    ],
+    "offer": [
+      {
+        "assumption": "$27 audit tripwire will convert",
+        "confidence": "Medium",
+        "evidence": "Low friction, high value, positions full service",
+        "risk": "Medium",
+        "test_method": "Launch landing page, drive 100 visitors, measure conversion"
+      },
+      {
+        "assumption": "Full service at $1,500-3,000/month is viable",
+        "confidence": "Medium",
+        "evidence": "Average patient LTV $1,200-2,400, need 2-3 patients to break even",
+        "risk": "High",
+        "test_method": "Pitch to 5 warm leads, gauge reaction"
+      }
+    ],
+    "competitive": [
+      {
+        "assumption": "We can differentiate from other marketing agencies",
+        "confidence": "High",
+        "evidence": "Most practices use generic agencies, niche specialization rare",
+        "risk": "Low",
+        "test_method": "Analyze 5 competitor agency websites for positioning"
+      }
+    ],
+    "timing": [
+      {
+        "assumption": "Q3 is good timing for campaign launch",
+        "confidence": "High",
+        "evidence": "Back-to-school season, sports injuries increase, insurance resets",
+        "risk": "Low",
+        "test_method": "Review historical Google Trends data for seasonality"
+      }
+    ]
+  },
+  "high_risk_assumptions": [
+    "Full service at $1,500-3,000/month is viable"
+  ],
+  "validation_plan": [
+    "Week 1: Run $100 Facebook test campaign",
+    "Week 2: Send 50 personalized outreach emails",
+    "Week 3: Launch tripwire landing page, drive traffic",
+    "Week 4: Pitch full service to 5 warm leads"
+  ],
+  "go_no_go_recommendation": "GO",
+  "generated_at": "2026-06-10T17:36:00Z"
+}

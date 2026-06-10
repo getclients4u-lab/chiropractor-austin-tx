@@ -1,0 +1,95 @@
+{
+  "business_name": "Austin Chiropractic Market",
+  "niche": "chiropractor",
+  "location": "Austin, TX",
+  "overall_score": 62,
+  "dimensions": {
+    "website": {
+      "score": 58,
+      "findings": [
+        "60% of practices have mobile-responsive sites",
+        "Average page load: 3.2s (should be <2s)",
+        "Only 40% have clear CTAs above the fold",
+        "30% still use outdated designs from 2018+"
+      ],
+      "opportunities": [
+        "Implement click-to-call buttons",
+        "Add online booking systems",
+        "Improve page speed with image optimization",
+        "Add patient testimonials to homepage"
+      ]
+    },
+    "google_business": {
+      "score": 71,
+      "findings": [
+        "Average 4.2 stars across 50 practices",
+        "Median review count: 87 reviews",
+        "Top performers have 200+ reviews",
+        "40% respond to negative reviews within 24h"
+      ],
+      "opportunities": [
+        "Increase review generation velocity",
+        "Add before/after photos to GBP",
+        "Post weekly updates/offers",
+        "Optimize for 'chiropractor near me' keywords"
+      ]
+    },
+    "social_media": {
+      "score": 45,
+      "findings": [
+        "70% have Facebook presence",
+        "Only 20% post consistently (3+/week)",
+        "Instagram adoption: 35%",
+        "Video content: <10% of practices"
+      ],
+      "opportunities": [
+        "Launch short-form video strategy",
+        "Implement patient testimonial series",
+        "Create educational content calendar",
+        "Engage with local community groups"
+      ]
+    },
+    "competition": {
+      "score": 68,
+      "findings": [
+        "127 chiropractic practices in Austin metro",
+        "Top 10 control 45% of search visibility",
+        "Average new patient acquisition cost: $180",
+        "3 new practices opened in last 6 months"
+      ],
+      "opportunities": [
+        "Target underserved neighborhoods",
+        "Differentiate with specialty services",
+        "Leverage Google Local Service Ads",
+        "Build referral partnerships with gyms"
+      ]
+    },
+    "paid_ads": {
+      "score": 38,
+      "findings": [
+        "Only 25% run Google Ads consistently",
+        "Facebook ad adoption: 15%",
+        "Average CPC: $8.50 (chiropractor Austin)",
+        "Retargeting usage: <5%"
+      ],
+      "opportunities": [
+        "Launch geo-targeted Google Ads",
+        "Implement Facebook lead gen campaigns",
+        "Set up retargeting for website visitors",
+        "Test Local Service Ads (Google Guaranteed)"
+      ]
+    }
+  },
+  "top_3_priorities": [
+    "Implement consistent social media video strategy",
+    "Launch paid advertising campaigns (Google + Facebook)",
+    "Optimize Google Business Profile with photos and posts"
+  ],
+  "quick_wins": [
+    "Add click-to-call to website header",
+    "Set up Google review request automation",
+    "Create 5 patient testimonial videos",
+    "Claim/optimize Google Business Profile if not done"
+  ],
+  "generated_at": "2026-06-10T17:36:00Z"
+}

@@ -1,0 +1,169 @@
+{
+  "project_id": "chiropractor-austin-tx",
+  "blueprint_version": "1.0",
+  "components": {
+    "landing_page": {
+      "type": "lead_capture",
+      "sections": [
+        "Hero with headline and CTA",
+        "Problem agitation",
+        "Solution overview",
+        "Social proof",
+        "Offer details",
+        "FAQ",
+        "Final CTA"
+      ],
+      "copy": {
+        "headline": "Get 5-10 New Chiropractic Patients Per Week in Austin",
+        "subheadline": "Proven marketing system for Austin chiropractors — without spending hours on social media",
+        "body": "We help chiropractic practices in Austin attract qualified patients using targeted Facebook campaigns, Google ads, and short-form video content.",
+        "cta": "Book Your Free Strategy Call"
+      },
+      "design_notes": "Mobile-first, purple/blue gradient, video background optional",
+      "tech_stack": "Static HTML + Vercel"
+    },
+    "outreach_sequence": {
+      "channel": "email",
+      "steps": [
+        {
+          "day": 0,
+          "type": "initial",
+          "subject": "Quick question about {Business Name}'s patient flow",
+          "body": "Personalized intro mentioning their reviews and offering a quick win."
+        },
+        {
+          "day": 3,
+          "type": "followup",
+          "subject": "Re: Quick question about {Business Name}'s patient flow",
+          "body": "Follow-up offering a 2-minute video audit."
+        },
+        {
+          "day": 7,
+          "type": "value_add",
+          "subject": "Austin chiropractor marketing benchmark",
+          "body": "Free report on what's working for top practices."
+        },
+        {
+          "day": 14,
+          "type": "breakup",
+          "subject": "Should I close your file?",
+          "body": "Polite close with open door for future contact."
+        }
+      ]
+    },
+    "ad_campaigns": [
+      {
+        "platform": "Facebook",
+        "objective": "Lead Generation",
+        "budget": "$500/month",
+        "audience": "Austin, TX + 15 miles, 25-65, interests: chiropractic, wellness, back pain",
+        "creatives": 3,
+        "headlines": [
+          "Austin Chiropractors: Get 5-10 New Patient Calls/Week",
+          "Is Your Chiropractic Practice Invisible Online?",
+          "We Booked 47 New Patients for an Austin Chiropractor Last Month"
+        ]
+      }
+    ],
+    "video_content": [
+      {
+        "title": "The 3-Second Back Pain Test",
+        "hook": "If you can't do this, your back is in trouble...",
+        "duration": "45 seconds"
+      },
+      {
+        "title": "What Your Posture Says About Your Health",
+        "hook": "Your posture is lying to you...",
+        "duration": "40 seconds"
+      },
+      {
+        "title": "Why Your Chiropractor Adjusts Your Neck",
+        "hook": "This is why that neck crack feels so good...",
+        "duration": "50 seconds"
+      }
+    ],
+    "tripwire": {
+      "offer": "$27 New Patient Marketing Audit",
+      "value": "$441",
+      "includes": [
+        "Online presence audit ($97)",
+        "Lead generation blueprint ($197)",
+        "Video strategy session ($147)"
+      ],
+      "upsell": "$197/month Done-With-You package",
+      "full_service": "$1,500-3,000/month"
+    },
+    "follow_up_system": {
+      "crm_stages": [
+        "Lead",
+        "Tripwire Purchase",
+        "Strategy Call Booked",
+        "Proposal Sent",
+        "Closed Won/Lost"
+      ],
+      "automated_sequences": [
+        "Welcome series (5 emails)",
+        "Nurture series (10 emails)",
+        "Re-engagement (3 emails)"
+      ]
+    },
+    "tracking": {
+      "kpis": [
+        "Leads generated",
+        "Cost per lead",
+        "Strategy calls booked",
+        "Tripwire conversion rate",
+        "Full service close rate"
+      ],
+      "tools": [
+        "Facebook Pixel",
+        "Google Analytics",
+        "UTM parameters",
+        "Call tracking"
+      ]
+    }
+  },
+  "asset_checklist": [
+    "Landing page HTML",
+    "Email sequence (4 emails)",
+    "Facebook ad creatives (3 ads)",
+    "Video scripts (10 videos)",
+    "Tripwire offer page",
+    "Tracking setup"
+  ],
+  "launch_timeline": [
+    {
+      "week": 1,
+      "tasks": [
+        "Finalize landing page",
+        "Set up Facebook Pixel",
+        "Create email automation"
+      ]
+    },
+    {
+      "week": 2,
+      "tasks": [
+        "Launch Facebook ads",
+        "Begin outreach sequence",
+        "Post first 3 videos"
+      ]
+    },
+    {
+      "week": 3,
+      "tasks": [
+        "Optimize ads based on data",
+        "Follow up with leads",
+        "Launch tripwire offer"
+      ]
+    },
+    {
+      "week": 4,
+      "tasks": [
+        "Review metrics",
+        "Scale winning ads",
+        "Book strategy calls"
+      ]
+    }
+  ],
+  "generated_at": "2026-06-10T17:36:00Z"
+}

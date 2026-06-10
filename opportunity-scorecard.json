@@ -1,0 +1,119 @@
+{
+  "project_id": "chiropractor-austin-tx",
+  "scoring_date": "2026-06-10",
+  "opportunities": [
+    {
+      "business_name": "Austin Spine & Wellness",
+      "contact_info": {
+        "phone": "512-555-0101",
+        "email": "info@austinspine.com",
+        "website": "https://austinspine.com"
+      },
+      "scores": {
+        "problem_severity": 22,
+        "market_timing": 20,
+        "accessibility": 18,
+        "value_potential": 23,
+        "fit": 20,
+        "total": 103
+      },
+      "tier": "TIER_1",
+      "recommended_action": "Call today — high-value opportunity with severe problems",
+      "outreach_priority": 1,
+      "estimated_contract_value": "$2,400/month",
+      "next_best_action": "Personalized Loom video audit of their website"
+    },
+    {
+      "business_name": "Hill Country Chiropractic",
+      "contact_info": {
+        "phone": "512-555-0102",
+        "email": "contact@hillcountrychiro.com",
+        "website": "https://hillcountrychiro.com"
+      },
+      "scores": {
+        "problem_severity": 20,
+        "market_timing": 18,
+        "accessibility": 16,
+        "value_potential": 21,
+        "fit": 19,
+        "total": 94
+      },
+      "tier": "TIER_1",
+      "recommended_action": "Priority outreach this week",
+      "outreach_priority": 2,
+      "estimated_contract_value": "$2,100/month",
+      "next_best_action": "Send personalized email with competitor analysis"
+    },
+    {
+      "business_name": "Central Austin Chiropractic",
+      "contact_info": {
+        "phone": "512-555-0103",
+        "email": "hello@centralaustinchiro.com",
+        "website": "https://centralaustinchiro.com"
+      },
+      "scores": {
+        "problem_severity": 18,
+        "market_timing": 17,
+        "accessibility": 15,
+        "value_potential": 19,
+        "fit": 17,
+        "total": 86
+      },
+      "tier": "TIER_2",
+      "recommended_action": "Outreach this week",
+      "outreach_priority": 3,
+      "estimated_contract_value": "$1,800/month",
+      "next_best_action": "LinkedIn connection + personalized message"
+    },
+    {
+      "business_name": "South Austin Family Chiropractic",
+      "contact_info": {
+        "phone": "512-555-0104",
+        "email": "info@southaustinchiro.com",
+        "website": "https://southaustinchiro.com"
+      },
+      "scores": {
+        "problem_severity": 15,
+        "market_timing": 16,
+        "accessibility": 14,
+        "value_potential": 17,
+        "fit": 16,
+        "total": 78
+      },
+      "tier": "TIER_2",
+      "recommended_action": "Standard outreach sequence",
+      "outreach_priority": 4,
+      "estimated_contract_value": "$1,500/month",
+      "next_best_action": "Email sequence with value-add content"
+    },
+    {
+      "business_name": "Round Rock Chiropractic Center",
+      "contact_info": {
+        "phone": "512-555-0105",
+        "email": "contact@roundrockchiro.com",
+        "website": "https://roundrockchiro.com"
+      },
+      "scores": {
+        "problem_severity": 12,
+        "market_timing": 14,
+        "accessibility": 13,
+        "value_potential": 15,
+        "fit": 14,
+        "total": 68
+      },
+      "tier": "TIER_3",
+      "recommended_action": "Nurture sequence",
+      "outreach_priority": 5,
+      "estimated_contract_value": "$1,200/month",
+      "next_best_action": "Add to newsletter, monitor for changes"
+    }
+  ],
+  "tier_summary": {
+    "tier_1_count": 2,
+    "tier_2_count": 2,
+    "tier_3_count": 1,
+    "tier_4_count": 0,
+    "tier_5_count": 0
+  },
+  "generated_at": "2026-06-10T17:36:00Z"
+}
