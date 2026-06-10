@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "chiropractor-austin-tx",
+  "builds": [
+    { "src": "assets/landing-page/index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "assets/landing-page/index.html" }
+  ]
+}
