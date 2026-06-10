@@ -4,16 +4,17 @@
   "location": "Austin, TX",
   "service": "lead generation",
   "created_at": "2026-06-10T13:14:20.021419Z",
-  "status": "created",
+  "status": "github_pushed",
   "github_repo": "getclients4u-lab/chiropractor-austin-tx",
   "vercel_url": null,
-  "steps_completed": [],
+  "steps_completed": [
+    "project-creation",
+    "asset-generation",
+    "github-push"
+  ],
   "steps_pending": [
-    "diagnostic-analyzer",
-    "assumption-mapper",
-    "signal-monitor",
-    "opportunity-scoring",
-    "blueprint-generator",
+    "vercel-deployment",
     "executive-report"
-  ]
+  ],
+  "github_url": "https://github.com/getclients4u-lab/chiropractor-austin-tx"
 }
