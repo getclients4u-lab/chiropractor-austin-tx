@@ -578,9 +578,59 @@
       .deliverables-grid { grid-template-columns: 1fr; }
       .form-card { padding: 28px; }
       .proof-card { padding: 30px 20px; }
+      .scroll-top-btn { width: 46px; height: 46px; bottom: 20px; right: 20px; }
+      .scroll-top-btn svg { width: 20px; height: 20px; }
     }
     @media (max-width: 480px) {
       .hero-stats { grid-template-columns: 1fr; }
+    }
+
+    /* ===== FLOATING SCROLL-TO-TOP ===== */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 9999;
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.35);
+      transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.85);
+      touch-action: none;
+      user-select: none;
+    }
+    .scroll-top-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+    .scroll-top-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(124,58,237,0.5);
+    }
+    .scroll-top-btn:active {
+      transform: scale(0.95);
+    }
+    .scroll-top-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -874,7 +924,80 @@
       answer.classList.toggle('open');
     }
 
-    // Form handler using Formspree
+    // === Floating scroll-to-top button ===
+    (function() {
+      var btn = document.createElement('button');
+      btn.className = 'scroll-top-btn';
+      btn.setAttribute('aria-label', 'Scroll to top');
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>';
+      document.body.appendChild(btn);
+
+      // Show/hide on scroll
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            btn.classList.toggle('visible', window.scrollY > 400);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Scroll to top on click
+      btn._clickHandler = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+      btn.addEventListener('click', btn._clickHandler);
+
+      // Draggable (pointer events — works on mobile + desktop)
+      (function makeDraggable(el) {
+        var startX, startY, origX, origY, dragging = false, moved = false;
+        el.addEventListener('pointerdown', function(e) {
+          if (e.button !== 0) return;
+          dragging = true; moved = false;
+          var r = el.getBoundingClientRect();
+          startX = e.clientX; startY = e.clientY;
+          origX = r.left; origY = r.top;
+          el.setPointerCapture(e.pointerId);
+          el.style.transition = 'none';
+          el.style.right = 'auto';
+          el.style.bottom = 'auto';
+        });
+        el.addEventListener('pointermove', function(e) {
+          if (!dragging) return;
+          var dx = e.clientX - startX, dy = e.clientY - startY;
+          if (Math.abs(dx) > 5 || Math.abs(dy) > 5) moved = true;
+          el.style.left = (origX + dx) + 'px';
+          el.style.top = (origY + dy) + 'px';
+        });
+        el.addEventListener('pointerup', function(e) {
+          if (!dragging) return;
+          dragging = false;
+          el.style.transition = '';
+          el.releasePointerCapture(e.pointerId);
+          // Clamp to viewport
+          var r = el.getBoundingClientRect();
+          var maxX = window.innerWidth - r.width - 8;
+          var maxY = window.innerHeight - r.height - 8;
+          var clampedX = Math.max(8, Math.min(r.left, maxX));
+          var clampedY = Math.max(8, Math.min(r.top, maxY));
+          el.style.left = clampedX + 'px';
+          el.style.top = clampedY + 'px';
+          // If it was really a drag, don't trigger the click action
+          if (moved) {
+            e.stopImmediatePropagation();
+            btn.removeEventListener('click', btn._clickHandler);
+            setTimeout(function() {
+              btn.addEventListener('click', btn._clickHandler);
+            }, 50);
+          }
+        });
+      })(btn);
+    })();
+
+    // Form handler using Vercel API
     async function handleSubmit(e) {
       e.preventDefault();
       var form = e.target;
