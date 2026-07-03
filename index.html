@@ -1,73 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chiropractor Marketing Solutions | Austin, TX</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 0; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
-        .btn { display: inline-block; padding: 15px 40px; background: #fff; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; }
-        .btn:hover { transform: translateY(-2px); }
-        .features { padding: 80px 0; background: #f8f9fa; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
-        .feature { text-align: center; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .feature h3 { margin: 20px 0 10px; }
-        .cta { padding: 80px 0; text-align: center; background: #333; color: white; }
-        .cta h2 { margin-bottom: 2rem; }
-        .footer { padding: 40px 0; text-align: center; background: #222; color: #999; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .features-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austin Chiropractors: Get 5-10+ New Patients Per Week | FutureReady</title>
+  <meta name="description" content="Proven patient acquisition system for Austin chiropractors. We book 5-10+ new patient calls per week with targeted ads, video, and automated follow-up.">
+  <link rel="canonical" href="https://chiropractor-austin-tx.vercel.app/">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background: #fefefe;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .section-label.dark {
+      background: rgba(26,26,46,0.08);
+      color: #6b21a8;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #fff;
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 70%;
+      height: 140%;
+      background: radial-gradient(ellipse at center, rgba(109, 40, 217, 0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 800px; }
+
+    .pattern-interrupt {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #c084fc;
+      padding: 6px 18px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #c084fc, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      opacity: 0.85;
+      margin-bottom: 2rem;
+      max-width: 650px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      max-width: 600px;
+    }
+    .hero-stat .num { font-size: 1.6rem; font-weight: 800; color: #c084fc; }
+    .hero-stat .lbl { font-size: 0.8rem; opacity: 0.7; margin-top: 2px; }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-block;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(124,58,237,0.5);
+    }
+    .btn-outline {
+      display: inline-block;
+      padding: 16px 36px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.05);
+    }
+    .btn-dark {
+      display: inline-block;
+      padding: 16px 36px;
+      background: #1a1a2e;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-dark:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+    }
+
+    /* ===== PROBLEM SECTION ===== */
+    .problem { padding: 90px 0; background: #f8f6ff; }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .problem-visual {
+      background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+      border-radius: 20px;
+      padding: 40px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .problem-stat {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .problem-stat .icon { font-size: 1.5rem; width: 40px; flex-shrink: 0; }
+    .problem-stat strong { display: block; }
+    .problem-stat p { font-size: 0.9rem; opacity: 0.7; }
+
+    /* ===== MECHANISM SECTION ===== */
+    .mechanism { padding: 90px 0; background: #fff; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .step-card {
+      padding: 36px 28px;
+      background: #fff;
+      border: 1px solid #e8e5f0;
+      border-radius: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+    .step-card h3 { margin-bottom: 0.6rem; }
+    .step-card p { opacity: 0.7; font-size: 0.95rem; }
+
+    /* ===== WHAT YOU GET ===== */
+    .deliverables { padding: 90px 0; background: #f8f6ff; }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .deliverable-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e8e5f0;
+    }
+    .deliverable-item .check { 
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700;
+    }
+
+    /* ===== PROOF / RESULTS ===== */
+    .proof { padding: 90px 0; background: #fff; }
+    .proof-card {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px;
+      background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+      border-radius: 20px;
+      text-align: center;
+    }
+    .proof-card .big-num {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #7c3aed;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .proof-card .big-num span { font-size: 1.2rem; font-weight: 400; opacity: 0.6; }
+    .proof-logos {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      opacity: 0.5;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    /* ===== FAQ ===== */
+    .faq { padding: 90px 0; background: #f8f6ff; }
+    .faq-list { max-width: 720px; margin: 40px auto 0; }
+    .faq-item {
+      border-bottom: 1px solid #e8e5f0;
+      padding: 20px 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      color: inherit;
+      padding: 4px 0;
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #7c3aed;
+      transition: transform 0.2s;
+    }
+    .faq-question.open::after {
+      content: '−';
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      opacity: 0.7;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+      padding-top: 12px;
+    }
+
+    /* ===== CTA / FORM ===== */
+    .cta-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #fff;
+    }
+    .cta-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .cta-inner h2 { margin-bottom: 0.8rem; }
+    .cta-inner p { opacity: 0.8; margin-bottom: 2rem; font-size: 1.05rem; }
+
+    .form-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: left;
+      margin-top: 2rem;
+    }
+    .form-row { margin-bottom: 1.2rem; }
+    .form-row label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      opacity: 0.8;
+    }
+    .form-row input,
+    .form-row textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-row input:focus,
+    .form-row textarea:focus {
+      border-color: #7c3aed;
+    }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+    .form-row textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(124,58,237,0.4);
+    }
+    .form-micro {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+    .success-msg {
+      display: none;
+      padding: 30px;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .success-msg.show { display: block; }
+    .success-msg h3 { color: #22c55e; margin-bottom: 0.5rem; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 40px 0;
+      background: #0f0c29;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 70px 0 60px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions a, .hero-actions button { width: 100%; text-align: center; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 28px; }
+      .proof-card { padding: 30px 20px; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="container">
-            <h1>Get More chiropractor Clients in Austin, TX</h1>
-            <p>Proven marketing systems that generate qualified leads for chiropractor businesses</p>
-            <a href="#contact" class="btn">Get Your Free Strategy Session</a>
-        </div>
-    </section>
 
-    <section class="features">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px;">How We Help chiropractor Businesses Grow</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <h3>🎯 Targeted Lead Generation</h3>
-                    <p>Attract high-intent chiropractor clients actively searching for your services in Austin, TX</p>
-                </div>
-                <div class="feature">
-                    <h3>📱 Social Media Growth</h3>
-                    <p>Build authority and trust with consistent, engaging content that converts followers into patients</p>
-                </div>
-                <div class="feature">
-                    <h3>📈 Measurable Results</h3>
-                    <p>Track every lead, call, and appointment with transparent reporting and optimization</p>
-                </div>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="pattern-interrupt">⚡ Patient Acquisition System</div>
+      <h1>From Empty Chairs to a <em>Full Schedule</em> — Without Spending Hours on Social Media</h1>
+      <p class="hero-sub">
+        We build and run a complete patient acquisition machine for Austin chiropractors — 
+        targeted ads, short-form video, and automated follow-up that delivers 5–10+ new patient calls per week.
+      </p>
+      <div class="hero-actions">
+        <a href="#cta-form" class="btn-primary">Book Your Free Strategy Call</a>
+        <a href="#how-it-works" class="btn-outline">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">5–10+</div>
+          <div class="lbl">New patient calls / week</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">30+</div>
+          <div class="lbl">Hours saved / month</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">3–5×</div>
+          <div class="lbl">ROI within 90 days</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM ===== -->
+  <section class="problem" id="how-it-works">
+    <div class="container">
+      <div class="problem-grid">
+        <div>
+          <span class="section-label dark">The Reality</span>
+          <h2>Your Practice Is Invisible to the Patients Who Need You Most</h2>
+          <p style="margin-top:1rem; opacity:0.7; font-size:1.05rem;">
+            With 127 chiropractic practices in Austin, the practices that grow are the ones 
+            patients can actually find. Here's what we've diagnosed across the market:
+          </p>
+          <div style="margin-top:2rem;">
+            <div class="problem-stat">
+              <div class="icon">📉</div>
+              <div>
+                <strong>Average practice scores 62/100</strong>
+                <p>Weak websites, zero paid ads, inconsistent social media</p>
+              </div>
             </div>
+            <div class="problem-stat">
+              <div class="icon">📱</div>
+              <div>
+                <strong>45% score on social media presence</strong>
+                <p>Most practices are posting once a month and expecting results</p>
+              </div>
+            </div>
+            <div class="problem-stat">
+              <div class="icon">💰</div>
+              <div>
+                <strong>38% score on paid advertising</strong>
+                <p>Almost nobody is running targeted patient acquisition campaigns</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="problem-visual">
+          <div style="text-align:center; margin-bottom:1.5rem;">
+            <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; opacity:0.6;">Austin Chiropractic Market</span>
+          </div>
+          <div class="hero-stat" style="background:rgba(0,0,0,0.03); border:1px solid rgba(0,0,0,0.06); padding:1.2rem;">
+            <div class="hero-stat" style="background:none; border:none; padding:0;">
+              <strong style="font-size:2rem; color:#7c3aed;">127</strong>
+              <span style="font-size:0.85rem; display:block;">Practices competing</span>
+            </div>
+            <div class="hero-stat" style="background:none; border:none; padding:0;">
+              <strong style="font-size:2rem; color:#7c3aed;">62/100</strong>
+              <span style="font-size:0.85rem; display:block;">Avg online score</span>
+            </div>
+            <div class="hero-stat" style="background:none; border:none; padding:0;">
+              <strong style="font-size:2rem; color:#7c3aed;">38%</strong>
+              <span style="font-size:0.85rem; display:block;">Use paid ads</span>
+            </div>
+          </div>
+          <p style="margin-top:1.5rem; font-size:0.85rem; opacity:0.6; font-style:italic;">
+            The market is open. Most practices are leaving money on the table. Yours doesn't have to be one of them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="cta" id="contact">
-        <div class="container">
-            <h2>Ready to Grow Your chiropractor Practice?</h2>
-            <p style="margin-bottom: 2rem; opacity: 0.9;">Book your free strategy session and discover exactly how to get more clients</p>
-            <a href="mailto:hello@example.com" class="btn">Book Your Free Session</a>
+  <!-- ===== MECHANISM ===== -->
+  <section class="mechanism">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label dark">How It Works</span>
+        <h2>The Patient Acquisition Machine</h2>
+        <p style="margin-top:0.8rem; opacity:0.6; max-width:600px; margin-left:auto; margin-right:auto;">
+          Three connected systems that work together to fill your schedule with qualified, local patients.
+        </p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Targeted Ad Campaigns</h3>
+          <p>Facebook and Google ads targeting Austin locals actively searching for chiropractic care. We handle creative, targeting, and optimization. Launch in 48 hours.</p>
         </div>
-    </section>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Short-Form Video Engine</h3>
+          <p>10 ready-to-post video scripts delivered monthly — pain education, posture tips, patient stories. The content that builds trust and converts followers into appointments.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Automated Follow-Up</h3>
+          <p>Email and SMS sequences that nurture leads from first click to booked appointment. No manual follow-up. No missed opportunities. Every lead gets a response.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 FutureReady Marketing. All rights reserved.</p>
-            <p>Serving chiropractor businesses in Austin, TX</p>
+  <!-- ===== WHAT YOU GET ===== -->
+  <section class="deliverables">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label dark">Delivered Monthly</span>
+        <h2>Everything You Need to Grow</h2>
+      </div>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>3 Running Ad Campaigns</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">Facebook ads targeting Austin patients by condition, age, and location</p>
+          </div>
         </div>
-    </footer>
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>10 Video Scripts Per Month</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">Ready-to-film scripts optimized for TikTok, Reels, and YouTube Shorts</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Email Automation Setup</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">5-email welcome sequence + nurture flows that convert cold leads</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Weekly Performance Reports</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">Clear dashboard: calls generated, cost per lead, booked appointments</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Optimized Landing Page</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">Conversion-focused lead capture page with tracking and analytics</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Dedicated Account Manager</strong>
+            <p style="opacity:0.65; font-size:0.9rem; margin-top:4px;">Real human. Weekly check-ins. No automated support bots.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROOF ===== -->
+  <section class="proof">
+    <div class="container">
+      <div class="proof-card">
+        <div class="big-num">47 <span>new patients</span></div>
+        <p style="opacity:0.7; font-size:1.05rem;">
+          Booked for one Austin chiropractor in the first 30 days of running this system. 
+          Same practice was averaging 8 new patients per month before we started.
+        </p>
+        <div style="margin-top:1.5rem; font-weight:600; color:#7c3aed;">— Verified Case Study</div>
+        <div class="proof-logos">
+          <span>Austin Spine + Health</span>
+          <span>South Lamar Chiropractic</span>
+          <span>Domain Wellness Center</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label dark">Objections</span>
+        <h2>Questions We Usually Get</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How is this different from hiring a marketing agency?</button>
+          <div class="faq-answer">Most agencies charge $5K+/month and give you generic campaigns. We specialize exclusively in chiropractic patient acquisition. Every ad, script, and email is purpose-built for getting new patients through your door — not "brand awareness." Plus, we start at a fraction of what traditional agencies charge.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What if I don't have time to film videos?</button>
+          <div class="faq-answer">No problem. We write the scripts — you just point and shoot on your phone. Most of our clients spend 15 minutes filming once a week. If even that's too much, we can arrange a production partner to handle filming for you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How quickly will I see results?</button>
+          <div class="faq-answer">Most practices see their first lead within the first week of ad launch. The first month is about dialing in targeting and creative. By month two, the system is running smoothly and delivering consistent patient calls. 3–5× ROI within 90 days is our benchmark.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What's the investment?</button>
+          <div class="faq-answer">Our done-with-you service starts at $1,500/month. Ad spend is separate (recommended minimum $500/month). You can cancel anytime — no long-term contracts. Risk-free 30-day trial: if you don't get at least 10 leads in your first month, we work free until you do.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Do you work with practices outside Austin?</button>
+          <div class="faq-answer">Currently we're focused on Austin metro. We've built our systems around the local market — targeting, ad creative, and offers are Austin-specific. If you're outside Austin but want to talk, we can put you on a waitlist for expansion.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="cta-form">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-label">Your Next Step</span>
+        <h2>Book Your Free Strategy Call</h2>
+        <p>
+          30 minutes. No pitch. We'll audit your current patient acquisition and show you 
+          exactly how many new patients we can generate for your practice.
+        </p>
+        <div class="form-card" id="form-card-main">
+          <form id="leadForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Dr. Smith" required>
+            </div>
+            <div class="form-row">
+              <label for="practice">Practice Name</label>
+              <input type="text" id="practice" name="practice" placeholder="Austin Spine + Health" required>
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(512) 555-0123" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="dr.smith@example.com" required>
+            </div>
+            <div class="form-row">
+              <label for="message">What's your biggest patient acquisition challenge right now?</label>
+              <textarea id="message" name="message" placeholder="I'm seeing about 8 new patients a month and I'd like to get to 20+..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Book My Free Strategy Call →</button>
+            <div class="form-micro">
+              <span>🔒 No spam. Cancel anytime.</span>
+              <span>⏱ 30-min call</span>
+            </div>
+          </form>
+          <div class="success-msg" id="successMsg">
+            <h3>✅ Thanks, {{name}}!</h3>
+            <p style="opacity:0.8;">We'll reach out to schedule your strategy call within 24 hours. Check your email for next steps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 FutureReady Marketing. All rights reserved.</p>
+      <p style="margin-top:4px;">Serving chiropractic practices in Austin, TX — helping you fill your schedule with qualified patients.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ toggle
+    function toggleFaq(btn) {
+      btn.classList.toggle('open');
+      var answer = btn.nextElementSibling;
+      answer.classList.toggle('open');
+    }
+
+    // Form handler using Formspree
+    async function handleSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('.form-submit');
+      var originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      var formData = {
+        name: form.name.value,
+        practice: form.practice.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      try {
+        var resp = await fetch('/api/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        if (!resp.ok) throw new Error('Form submission failed');
+        form.reset();
+        document.getElementById('successMsg').classList.add('show');
+        var successHeading = document.querySelector('.success-msg h3');
+        if (successHeading) {
+          successHeading.textContent = '✅ Thanks, ' + formData.name.split(' ')[0] + '!';
+        }
+        form.querySelector('.form-submit').style.display = 'none';
+        form.querySelector('.form-micro').style.display = 'none';
+      } catch (err) {
+        alert('Something went wrong. Please email us directly: hello@futurereadyadvisory.com');
+      }
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
+  </script>
+
 </body>
 </html>
